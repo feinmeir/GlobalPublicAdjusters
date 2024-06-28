@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Adjustersf</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="background-image">
+
+    <header>
+        <div class="logo">
+            <!-- <img src="https://globaladjustersfla.com/wp-content/uploads/2023/04/f038a336-8160-43c5-a5a3-fd8952606bac-removebg-preview-1.png" alt="Company Logo"> -->
+           <!-- <h2>moshe@globaladjustersfla.com</h2>   -->
+        </div>
+        <div class="contact-info">
+            <p>Call Now: <a href="tel:+1234567890">(786) 992-7010</a></p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="left">
+            <div class="description">
+               <!-- <img src="aboutus.jpg" alt="About Us">-->
+            </div>
+        </div>
+        <div class="right">
+            <div class="contact-box">
+                <div class="promo">
+                    <h1>Get You're Estimate Today</h1>
+                </div>
+                <form id="contactForm" action="#" method="POST">
+                    <!--<label for="firstName">First Name:</label> -->
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your full name" required>
+
+                    <!-- <label for="lastName">Last Name:</label> -->
+                    <input type="text" id="addres" name="addres" placeholder="Enter your addres" required>
+
+                    <!-- <label for="phoneNumber">Phone Number:</label> -->
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required>
+
+                    <!-- <label for="email">Email:</label> -->
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <!-- <label for="requestType">Type of Request:</label> -->
+                    <select id="requestType" name="requestType" required>
+                        <option value="PLUMING LEAK">PLUMING LEAK</option>
+                        <option value="MOLD">MOLD</option>
+                        <option value="HURRICANE DAMAGE">HURRICANE DAMAGE</option>
+                        <option value="FLOOD DAMAGE">FLOOD DAMAGE</option>
+                        <option value="HAIL DAMAGE">HAIL DAMAGE</option>
+                        <option value="AIR CONDITIONER LEAK">AIR CONDITIONER LEAK</option>
+                        <option value="WATER DAMAGE">WATER DAMAGE</option>
+                        <option value="SEWER BACKUP">SEWER BACKUP</option>
+                    </select>
+
+                  <!--  <fieldset class="checkbox-section">
+                        <legend>Preferred Contact Method:</legend>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="contactMethod" value="Email"> Email</label>
+                            <label><input type="checkbox" name="contactMethod" value="Phone"> Phone</label>
+                            <label><input type="checkbox" name="contactMethod" value="SMS"> SMS</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="checkbox-section">
+                        <legend>Preferred Contact Time:</legend>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="contactTime" value="Morning"> Morning</label>
+                            <label><input type="checkbox" name="contactTime" value="Afternoon"> Afternoon</label>
+                            <label><input type="checkbox" name="contactTime" value="After Business Hours"> After Business Hours</label>
+                        </div>
+                    </fieldset>-->
+
+                    <button type="submit">Get Help Today</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const firstName = document.getElementById('firstName').value;
+            const addres = document.getElementById('addres').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const email = document.getElementById('email').value;
+            const requestType = document.getElementById('requestType').value;
+            
+            const contactMethods = Array.from(document.querySelectorAll('input[name="contactMethod"]:checked')).map(cb => cb.value);
+            const contactTimes = Array.from(document.querySelectorAll('input[name="contactTime"]:checked')).map(cb => cb.value);
+            
+            // Your Google Form ID and Entry IDs
+            const googleFormId = '1FAIpQLSdt5pNDfNvwPXL_mB2lbqa34BbiwdhK8sWao3qDq7Ue3CPtew';
+            const entryFirstNameId = 'entry.2005620554';
+            const entryAddresId = 'entry.135079257';
+            const entryPhoneNumberId = 'entry.1166974658';
+            const entryEmailId = 'entry.1045781291';
+            const entryRequestTypeId = 'entry.1065046570';
+
+            const formData = new FormData();
+            formData.append(entryFirstNameId, firstName);
+            formData.append(entryAddresId, addres);
+            formData.append(entryPhoneNumberId, phoneNumber);
+            formData.append(entryEmailId, email);
+            formData.append(entryRequestTypeId, requestType);
+            
+            formData.append('fvv', '1');
+            
+            // Submit the form using fetch with POST method
+            fetch(`https://docs.google.com/forms/u/0/d/e/${googleFormId}/formResponse`, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            })
+            .then(response => {
+                alert('Form submitted successfully!');
+            })
+            .catch(error => {
+                alert('There was an error submitting the form.');
+            });
+        });
+    </script>
+
+</body>
+</html>

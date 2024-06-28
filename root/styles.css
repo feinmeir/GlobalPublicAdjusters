@@ -1,0 +1,923 @@
+/* Reset and General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.background-image {
+    background: url('aboutus.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* Soft background color */
+    color: #495057; /* Darker text color */
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Distribute space between sections */
+}
+
+header {
+ /* Blue header background */
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: right !important;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: right !important;
+}
+
+.logo img {
+    height: 80px;
+    margin-right: 10px;
+}
+
+.logo h2 {
+    color: #d4c775;
+    margin-left: 100px;
+    font-size: 20px;
+}
+
+.contact-info {
+ background-color: transparent;/* Darker blue contact info background */
+    color: black;
+    padding: 10px 10px;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: auto; /* Pushes contact info to the right */
+    font-size: 25px;
+    align-self: right !important;
+}
+
+.contact-info p {
+    margin-bottom: 5px;
+}
+
+.contact-info a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: #007BFF;
+}
+
+
+/* About Us Section */
+.left {
+    width: 50%; /* Adjusted width for larger screens */
+    margin-left: 50px; /* Added space between sections */
+    margin-top: 50px;
+}
+
+.left img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Box Section */
+.right {
+    color: black;
+    width: 40% !important; /* Adjusted width for larger screens */
+    display: flex;
+    justify-content: center; /* Center align content */
+    align-items: center; /* Center align content */
+    margin-top: 10%;
+    margin-right: 27%;
+}
+
+.contact-box {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Set maximum width for the contact box */
+    width: 100%; /* Ensure it takes full width in smaller screens */
+
+}
+
+.contact-box .promo {
+ /* Green promo background */
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-box label {
+    margin-bottom: 5px;
+}
+.contact-box label {
+    font-size: 20px;
+}
+.contact-box input[type="text"],
+.contact-box input[type="tel"],
+.contact-box input[type="email"],
+.contact-box select,
+.contact-box textarea {
+    background-color: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 5%;
+}
+
+.contact-box select {
+    width: 100%;
+}
+
+.checkbox-section {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.checkbox-group, .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkbox-group label, .radio-group label {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.checkbox-group input[type="checkbox"],
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+.contact-box button {
+    background-color: #77b3f4; /* Blue button background */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    margin-top: 5%;
+}
+
+.contact-box button:hover {
+    background-color: #0056b3; /* Darker blue hover background */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .left, .right {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .left img {
+        width: 100%;
+    }
+}
+
+/*@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left, .right {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .left img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-info {
+        margin: 10px auto;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+
+    .contact-box {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .contact-box input[type="text"],
+    .contact-box input[type="tel"],
+    .contact-box input[type="email"],
+    .contact-box select,
+    .contact-box textarea {
+        padding: 8px;
+        font-size: 20px;
+    }
+
+    .contact-box button {
+        padding: 12px;
+        font-size: 20px;
+    }
+
+    .checkbox-group, .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .checkbox-group label, .radio-group label {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .checkbox-group input[type="checkbox"], .radio-group input[type="radio"] {
+        margin: 0;
+        width: auto;
+        align-self: flex-start;
+    }
+}
+    and (max-height: 750px)
+*/
+
+/* Mobile Devices Portrait */
+@media (max-width: 419px) and (max-height: 700px) {
+
+    header {
+        /* Blue header background */
+           color: white;
+           padding: 2px;
+           display: flex;
+           justify-content: space-between;
+           align-items: right !important;
+           border-radius: 1px;
+           margin-bottom: 2px;
+       }
+
+    .logo {
+        display: flex;
+        align-items: right !important;
+        align-self: right !important;
+    }
+
+    .logo img{
+        height: 40px;
+    }
+
+    .contact-info {
+        background-color: transparent;/* Darker blue contact info background */
+           color: black;
+           padding: 0px 0px;
+           border-radius: 4px;
+           text-align: right;
+           margin-left: 40px !important; /* Pushes contact info to the right */
+           font-size: 15px;
+           align-self: right !important;
+       }
+
+    .container {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left {
+        width: 60%; /* Adjusted width for larger screens */
+         /* Added space between sections */
+        margin-top: -45px;
+    }
+
+    .right {
+        width: 60% !important;
+        margin-right: -15% !important;
+        margin-top: 18% !important;
+    }
+    h1 {
+        font-size: larger;
+    }
+    .left img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-box {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .contact-box label {
+        font-size: 14px;
+    }
+
+    .contact-box input[type="text"],
+    .contact-box input[type="tel"],
+    .contact-box input[type="email"],
+    .contact-box select,
+    .contact-box textarea {
+        text-align: center;
+        padding: 4px;
+        font-size: 14px;
+        margin-top: 3% !important;
+    }
+
+    .contact-box button {
+        padding: 6px;
+        font-size: 16px;
+    }
+
+    .checkbox-group, .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    label {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .checkbox-group label, .radio-group label {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .checkbox-group input[type="checkbox"], .radio-group input[type="radio"] {
+        margin: 0;
+        width: auto;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 419px) and (min-height: 701px) and (max-height: 750px) {
+
+    header {
+        /* Blue header background */
+           color: white;
+           padding: 2px;
+           display: flex;
+           justify-content: space-between;
+           align-items: right !important;
+           border-radius: 1px;
+           margin-bottom: 2px;
+       }
+
+    .logo {
+        display: flex;
+        align-items: right !important;
+        align-self: right !important;
+    }
+
+    .logo img{
+        height: 40px;
+    }
+
+    .contact-info {
+        background-color: transparent;/* Darker blue contact info background */
+           color: black;
+           padding: 0px 0px;
+           border-radius: 4px;
+           text-align: right;
+           margin-left: 40px !important; /* Pushes contact info to the right */
+           font-size: 15px;
+           align-self: right !important;
+       }
+
+    .container {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left {
+        width: 60%; /* Adjusted width for larger screens */
+         /* Added space between sections */
+        margin-top: -45px;
+    }
+
+    .right {
+        width: 60% !important;
+        margin-right: -18% !important;
+        margin-top: 27% !important;
+    }
+    h1 {
+        font-size: larger;
+    }
+    .left img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-box {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .contact-box label {
+        font-size: 14px;
+    }
+
+    .contact-box input[type="text"],
+    .contact-box input[type="tel"],
+    .contact-box input[type="email"],
+    .contact-box select,
+    .contact-box textarea {
+        text-align: center;
+        padding: 4px;
+        font-size: 14px;
+        margin-top: 3% !important;
+    }
+
+    .contact-box button {
+        padding: 6px;
+        font-size: 16px;
+    }
+
+    .checkbox-group, .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    label {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .checkbox-group label, .radio-group label {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .checkbox-group input[type="checkbox"], .radio-group input[type="radio"] {
+        margin: 0;
+        width: auto;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 419px) and (min-height: 751px) and (max-height: 806px) {
+
+    header {
+        /* Blue header background */
+           color: white;
+           padding: 2px;
+           display: flex;
+           justify-content: space-between;
+           align-items: right !important;
+           border-radius: 1px;
+           margin-bottom: 2px;
+       }
+
+    .logo {
+        display: flex;
+        align-items: right !important;
+        align-self: right !important;
+    }
+
+    .logo img{
+        height: 40px;
+    }
+
+    .contact-info {
+        background-color: transparent;/* Darker blue contact info background */
+           color: black;
+           padding: 0px 0px;
+           border-radius: 4px;
+           text-align: right;
+           margin-left: 40px !important; /* Pushes contact info to the right */
+           font-size: 15px;
+           align-self: right !important;
+       }
+
+    .container {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left {
+        width: 60%; /* Adjusted width for larger screens */
+         /* Added space between sections */
+        margin-top: -45px;
+    }
+
+    .right {
+        width: 60% !important;
+        margin-right: -18% !important;
+        margin-top: 36% !important;
+    }
+    h1 {
+        font-size: larger;
+    }
+    .left img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-box {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .contact-box label {
+        font-size: 14px;
+    }
+
+    .contact-box input[type="text"],
+    .contact-box input[type="tel"],
+    .contact-box input[type="email"],
+    .contact-box select,
+    .contact-box textarea {
+        text-align: center;
+        padding: 4px;
+        font-size: 14px;
+        margin-top: 3% !important;
+    }
+
+    .contact-box button {
+        padding: 6px;
+        font-size: 16px;
+    }
+
+    .checkbox-group, .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    label {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .checkbox-group label, .radio-group label {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .checkbox-group input[type="checkbox"], .radio-group input[type="radio"] {
+        margin: 0;
+        width: auto;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 419px) and (min-height: 807px) and (max-height: 991px) {
+
+    header {
+        /* Blue header background */
+           color: white;
+           padding: 2px;
+           display: flex;
+           justify-content: space-between;
+           align-items: right !important;
+           border-radius: 1px;
+           margin-bottom: 2px;
+       }
+
+    .logo {
+        display: flex;
+        align-items: right !important;
+        align-self: right !important;
+    }
+
+    .logo img{
+        height: 40px;
+    }
+
+    .contact-info {
+        background-color: transparent;/* Darker blue contact info background */
+           color: black;
+           padding: 0px 0px;
+           border-radius: 4px;
+           text-align: right;
+           margin-left: 40px !important; /* Pushes contact info to the right */
+           font-size: 20px;
+           align-self: right !important;
+       }
+
+    .container {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left {
+        width: 60%; /* Adjusted width for larger screens */
+         /* Added space between sections */
+        margin-top: -45px;
+    }
+
+    .right {
+        width: 60% !important;
+        margin-right: -18% !important;
+        margin-top: 36% !important;
+    }
+    h1 {
+        font-size: x-large;
+    }
+    .left img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-box {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .contact-box label {
+        font-size: 14px;
+    }
+
+    .contact-box input[type="text"],
+    .contact-box input[type="tel"],
+    .contact-box input[type="email"],
+    .contact-box select,
+    .contact-box textarea {
+        text-align: center;
+        padding: 4px;
+        font-size: 14px;
+        margin-top: 6% !important;
+        margin-bottom: 6%;
+    }
+
+    .contact-box button {
+        padding: 6px;
+        font-size: 20px;
+        margin-top: 6%;
+    }
+
+    .checkbox-group, .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    label {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .checkbox-group label, .radio-group label {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .checkbox-group input[type="checkbox"], .radio-group input[type="radio"] {
+        margin: 0;
+        width: auto;
+        align-self: flex-start;
+    }
+}
+
+
+/*  bigger then iphone se */
+@media (max-width: 480px) and (min-width: 420px) {
+
+    header {
+        /* Blue header background */
+           color: white;
+           padding: 2px;
+           display: flex;
+           justify-content: space-between;
+           align-items: right !important;
+           border-radius: 1px;
+           margin-bottom: 2px;
+       }
+
+    .logo {
+        display: flex;
+        align-items: right !important;
+        align-self: right !important;
+    }
+
+    .logo img{
+        height: 40px;
+    }
+
+    .contact-info {
+        background-color: transparent;/* Darker blue contact info background */
+           color: black;
+           padding: 0px 0px;
+           border-radius: 4px;
+           text-align: right;
+           margin-left: 40px !important; /* Pushes contact info to the right */
+           font-size: 22px;
+           align-self: right !important;
+       }
+
+    .container {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left {
+        width: 60%; /* Adjusted width for larger screens */
+         /* Added space between sections */
+        margin-top: -45px;
+    }
+
+    .right {
+        width: 60% !important;
+        margin-right: -18% !important;
+        margin-top: 39% !important;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    .left img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-box {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .contact-box label {
+        font-size: 20px;
+    }
+
+    .contact-box input[type="text"],
+    .contact-box input[type="tel"],
+    .contact-box input[type="email"],
+    .contact-box select,
+    .contact-box textarea {
+        text-align: center;
+        padding: 4px;
+        font-size: 20px !important;
+        margin-top: 6% !important;
+        margin-bottom: 6%;
+    }
+
+    .contact-box button {
+        padding: 6px;
+        font-size: 20px;
+        margin-top: 6%;
+    }
+
+    .checkbox-group, .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    label {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .checkbox-group label, .radio-group label {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .checkbox-group input[type="checkbox"], .radio-group input[type="radio"] {
+        margin: 0;
+        width: auto;
+        align-self: flex-start;
+    }
+}
+
+/* Tablets Portrait */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left, .right {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .left img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-info {
+        margin: 10px auto;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+
+    .contact-box {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .contact-box input[type="text"],
+    .contact-box input[type="tel"],
+    .contact-box input[type="email"],
+    .contact-box select,
+    .contact-box textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .contact-box button {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .checkbox-group, .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .checkbox-group label, .radio-group label {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .checkbox-group input[type="checkbox"], .radio-group input[type="radio"] {
+        margin: 0;
+        width: auto;
+        align-self: flex-start;
+    }
+}
+
+/* Tablets Landscape */
+@media (max-width: 1024px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .left, .right {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .left img {
+        width: 100%;
+    }
+
+    .contact-info {
+        margin: 10px auto;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+
+    .contact-box {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .contact-box input[type="text"],
+    .contact-box input[type="tel"],
+    .contact-box input[type="email"],
+    .contact-box select,
+    .contact-box textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .contact-box button {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .checkbox-group, .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .checkbox-group label, .radio-group label {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .checkbox-group input[type="checkbox"], .radio-group input[type="radio"] {
+        margin: 0;
+        width: auto;
+        align-self: flex-start;
+    }
+}
+/*width = 1661*/
