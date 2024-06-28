@@ -77,6 +77,11 @@
             </div>
         </div>
     </div>
+    <div id="customMessageBox">
+        <img src="https://globaladjustersfla.com/wp-content/uploads/2023/04/f038a336-8160-43c5-a5a3-fd8952606bac-removebg-preview-1.png" alt="Logo"> <!-- Replace with your logo path -->
+        <p>Form submitted successfully!</p>
+        <button id="closeButton">Close</button>
+    </div>
 
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -116,12 +121,28 @@
                 mode: 'no-cors'
             })
             .then(response => {
-                alert('Form submitted successfully!');
+                displayCustomMessageBox('Form submitted successfully!');
             })
             .catch(error => {
-                alert('There was an error submitting the form.');
+                displayCustomMessageBox('There was an error submitting the form.');
             });
         });
+        
+        function displayCustomMessageBox(message) {
+        const customMessageBox = document.getElementById('customMessageBox');
+        customMessageBox.querySelector('p').textContent = message;
+        customMessageBox.style.display = 'block';
+
+        const closeButton = document.getElementById('closeButton');
+        closeButton.addEventListener('click', function() {
+            customMessageBox.style.display = 'none';
+        });
+
+        // Automatically close the custom message box after 10 seconds
+        setTimeout(function() {
+            customMessageBox.style.display = 'none';
+        }, 10000);
+    }
     </script>
 
 </body>
