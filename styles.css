@@ -193,6 +193,44 @@ header {
     background-color: #0056b3; /* Darker blue hover background */
 }
 
+
+#customMessageBox {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #444;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+#customMessageBox img {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 100px;
+}
+#customMessageBox p {
+    margin: 10px 0;
+    color: black;
+}
+#customMessageBox button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#customMessageBox button:hover {
+    background-color: #0056b3;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .container {
