@@ -150,6 +150,27 @@ header {
     border-radius: 5px;
     font-size: 20px;
     margin-top: 5%;
+    color: #2d3752;
+}
+
+/* Ensure background color stays the same on focus */
+.contact-box input[type="text"]:focus,
+.contact-box input[type="tel"]:focus,
+.contact-box input[type="email"]:focus,
+.contact-box select:focus,
+.contact-box textarea:focus {
+    background-color: #c9d4e7;
+    color: #2d3752;
+}
+
+/* Ensure background color stays the same when active */
+.contact-box input[type="text"]:active,
+.contact-box input[type="tel"]:active,
+.contact-box input[type="email"]:active,
+.contact-box select:active,
+.contact-box textarea:active {
+    background-color: #c9d4e7;
+    color: #2d3752;
 }
 
 .contact-box select {
